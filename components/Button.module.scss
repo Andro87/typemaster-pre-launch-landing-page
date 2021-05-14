@@ -1,0 +1,40 @@
+.button {
+    outline: none;
+    border: none;
+    font-family: "barlow";
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 11px 14px;
+    border-radius: 8px;
+    width: 150px;
+    cursor: pointer;
+    @media screen and(min-width:500px) {
+        width: 175px;
+    }
+}
+
+.grey {
+    color: var(--DarkBlue);
+    background-color: var(--Grey);
+    &:hover {
+        background-color: var(--DarkBlue);
+        color: var(--White);
+    }
+    &:focus {
+        color: var(--White);
+        background-color: rgb(91, 92, 94);
+        transition: background-color 0.2s linear 0.3s;
+    }
+}
+.orange {
+    color: var(--White);
+    background-color: var(--Orange);
+    &:hover {
+        background-color: var(--LightOrange);
+    }
+
+    &:focus {
+        background-color: rgba(196, 72, 0, 0.932);
+        transition: background-color 0.2s linear 0.3s;
+    }
+}
