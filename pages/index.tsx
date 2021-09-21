@@ -1,7 +1,5 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
-import Header from "../components/Header";
-import Paragraph from "../components/Paragraph";
 import Button from "../components/Button";
 import Detail from "../components/Detail";
 export default function Home() {
@@ -17,43 +15,37 @@ export default function Home() {
                 />
                 <link rel="icon" href="/images/favicon-32x32.png" />
             </Head>
-
-            <div className={styles.header_wrap}>
-                <div className={styles.header_interaction}>
-                    <img src="/images/shared/logo.svg" alt="logo" />
-                    <Button color="grey" />
-                </div>
-
-                <div className={styles.header_container}>
-                    <div className={styles.header_intro}>
+            <header className={styles.header}>
+                <img src="/images/shared/logo.svg" alt="logo" />
+                <Button color="grey" />
+            </header>
+            <main className={styles.main}>
+                <div className={styles.main_container}>
+                    <div className={styles.main_intro}>
                         <div className={styles.intro_wrap}>
-                            <Header
-                                type="primary"
-                                header="TYPEMASTER KEYBOARD"
-                            />
+                            <h1>TYPEMASTER KEYBOARD</h1>
 
-                            <Paragraph
-                                paragraph="  Improve your productivity and gaming without breaking the bank. Upgrade to a high quality 
-                                                mechanical typing experience."
-                                size="desktop"
-                            />
+                            <p>
+                                Improve your productivity and gaming without
+                                breaking the bank. Upgrade to a high quality
+                                mechanical typing experience.
+                            </p>
 
-                            <div className={styles.wrap}>
+                            <div className={styles.btn_wrap}>
                                 <Button color="orange" />
-
-                                <Paragraph paragraph=" RELEASE ON 5/27" />
+                                <p> RELEASE ON 5/27</p>
                             </div>
                         </div>
 
-                        <div className={styles.header_image}>
+                        <div className={styles.main_image}>
                             <picture>
                                 <source
                                     srcSet="/images/desktop/image-keyboard.jpg"
-                                    media="(min-width:978px)"
+                                    media="(min-width:1200px)"
                                 />
                                 <source
                                     srcSet="/images/tablet/image-keyboard.jpg"
-                                    media="(min-width:500px)"
+                                    media="(min-width:730px)"
                                 />
                                 <img
                                     src="/images/mobile/image-keyboard.jpg"
@@ -66,8 +58,8 @@ export default function Home() {
                         <img src="/images/shared/pattern-square.svg" alt="" />
                     </div>
                 </div>
-            </div>
-            <div className={styles.section_keyboard}>
+            </main>
+            <section className={styles.section_keyboard} aria-label="keyboard">
                 <div className={styles.square_keyboard}>
                     <img src="/images/shared/pattern-square.svg" alt="" />
                 </div>
@@ -77,12 +69,12 @@ export default function Home() {
                         <picture className={styles.image1}>
                             <source
                                 srcSet="/images/desktop/image-phone-and-keyboard.jpg"
-                                media="(min-width:978px)"
+                                media="(min-width:1200px)"
                             />
 
                             <source
                                 srcSet="/images/tablet/image-phone-and-keyboard.jpg"
-                                media="(min-width:500px)"
+                                media="(min-width:730px)"
                             />
                             <img
                                 src="/images/mobile/image-phone-and-keyboard.jpg"
@@ -93,11 +85,11 @@ export default function Home() {
                         <picture className={styles.image2}>
                             <source
                                 srcSet="/images/desktop/image-glass-and-keyboard.jpg"
-                                media="(min-width:978px)"
+                                media="(min-width:1200px)"
                             />
                             <source
                                 srcSet="/images/tablet/image-glass-and-keyboard.jpg"
-                                media="(min-width:500px)"
+                                media="(min-width:730px)"
                             />
                             <img
                                 src="/images/mobile/image-glass-and-keyboard.jpg"
@@ -107,20 +99,22 @@ export default function Home() {
                     </div>
 
                     <div className={styles.section_info}>
-                        <Header
-                            type="secondary"
-                            header="  MECHANICAL WIRELESS KEYBOARD"
-                        />
+                        <h2> MECHANICAL WIRELESS KEYBOARD</h2>
 
-                        <Paragraph
-                            paragraph="The Typemaster keyboard boasts top-notch build and practical design. It offers a wide variety 
-                                          of switches and keycaps, along with reliable wireless connectivity."
-                        />
+                        <p>
+                            The Typemaster keyboard boasts top-notch build and
+                            practical design. It offers a wide variety of
+                            switches and keycaps, along with reliable wireless
+                            connectivity.
+                        </p>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div className={styles.section_details}>
+            <section
+                className={styles.section_details}
+                aria-label="more informations"
+            >
                 <div className={styles.details_wrap}>
                     <Detail
                         icon={
@@ -136,15 +130,9 @@ export default function Home() {
                                 />
                             </svg>
                         }
-                        header={
-                            <Header type="third" header="HIGHLY COMPATIBLE" />
-                        }
-                        paragraph={
-                            <Paragraph
-                                paragraph=" Easy to use and works well with all major computer brands, gaming consoles and mobile devices. 
+                        header="HIGHLY COMPATIBLE"
+                        paragraph=" Easy to use and works well with all major computer brands, gaming consoles and mobile devices. 
                     Plug & play, no installation or driver needed."
-                            />
-                        }
                     />
 
                     <Detail
@@ -161,18 +149,11 @@ export default function Home() {
                                 />
                             </svg>
                         }
-                        header={
-                            <Header
-                                type="third"
-                                header="WIRELESS WITH BLUETOOTH"
-                            />
-                        }
-                        paragraph={
-                            <Paragraph
-                                paragraph=" Powerful 2.4G RF technology allows you to connect the cordless keyboard from up to 30ft away. 
+                        header="WIRELESS WITH BLUETOOTH"
+                        paragraph="
+                          
+                                Powerful 2.4G RF technology allows you to connect the cordless keyboard from up to 30ft away. 
                                 Simply plug the unifying receiver into your computer"
-                            />
-                        }
                     />
 
                     <Detail
@@ -189,18 +170,9 @@ export default function Home() {
                                 />
                             </svg>
                         }
-                        header={
-                            <Header
-                                type="third"
-                                header="HIGH CAPACITY BATTERY"
-                            />
-                        }
-                        paragraph={
-                            <Paragraph
-                                paragraph="   Equipped with a long-lasting built-in battery, you’ll never have to spend a dime on replaceable ones. 
+                        header="HIGH CAPACITY BATTERY"
+                        paragraph="   Equipped with a long-lasting built-in battery, you’ll never have to spend a dime on replaceable ones. 
                                 Enjoy 40 hours of usage time between charges."
-                            />
-                        }
                     />
 
                     <Detail
@@ -217,24 +189,18 @@ export default function Home() {
                                 />
                             </svg>
                         }
-                        header={
-                            <Header type="third" header="RGB  BACKLIT MODES" />
-                        }
-                        paragraph={
-                            <Paragraph
-                                paragraph="  Choose from 4 backlight brightness levels and adjustable breathing speed. Each key glows intensely in the dark and helps
+                        header="RGB  BACKLIT MODES"
+                        paragraph="  Choose from 4 backlight brightness levels and adjustable breathing speed. Each key glows intensely in the dark and helps
                                 you type in low light conditions."
-                            />
-                        }
                     />
                 </div>
-            </div>
+            </section>
 
-            <div className={styles.rights}>
+            <footer className={styles.footer}>
                 <p>
                     Typemaster 2021 | <span>All Rights Reserved</span>
                 </p>
-            </div>
+            </footer>
         </div>
     );
 }

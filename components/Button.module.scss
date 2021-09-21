@@ -1,14 +1,16 @@
+@import "../styles/variables.scss";
+
 .button {
     outline: none;
     border: none;
     font-family: "barlow";
     font-weight: 700;
     font-size: 1rem;
-    padding: 11px 14px;
+    padding: 10px 14px;
     border-radius: 8px;
     width: 150px;
     cursor: pointer;
-    @media screen and(min-width:500px) {
+    @media screen and(min-width:$tablet) {
         width: 175px;
     }
 }
@@ -19,6 +21,7 @@
     &:hover {
         background-color: var(--DarkBlue);
         color: var(--White);
+        transition: all 0.2s ease-in-out;
     }
     &:focus {
         color: var(--White);
@@ -31,6 +34,7 @@
     background-color: var(--Orange);
     &:hover {
         background-color: var(--LightOrange);
+        transition: all 0.2s ease-in-out;
     }
 
     &:focus {

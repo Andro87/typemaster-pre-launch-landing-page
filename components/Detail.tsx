@@ -13,9 +13,9 @@ const Detail: React.FunctionComponent<Props> = props => {
         <div className={styles.details}>
             <div className={styles.icon_box}> {icon}</div>
 
-            {header}
+            <h4> {header}</h4>
 
-            {paragraph}
+            <p> {paragraph}</p>
         </div>
     );
 };

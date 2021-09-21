@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -32,4 +34,41 @@
 
 html {
     font-size: 16px;
+}
+
+h1,
+h2,
+h4 {
+    font-family: "barlow";
+    font-weight: 900;
+    color: var(--DarkBlue);
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+    @media screen and (max-width: 350px) {
+        font-size: clamp(2.5rem, 5vw, 3rem);
+    }
+
+    @media screen and (min-width: $desktop) {
+        line-height: 3.5rem;
+    }
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+}
+p {
+    font-family: "barlow";
+    font-weight: 500;
+    color: var(--LightBlue);
+    font-size: 1rem;
+    line-height: 1.625rem;
 }
