@@ -13,7 +13,7 @@ const Detail: React.FunctionComponent<Props> = props => {
         <div className={styles.details}>
             <div className={styles.icon_box}> {icon}</div>
 
-            <h4> {header}</h4>
+            <h3> {header}</h3>
 
             <p> {paragraph}</p>
         </div>

@@ -171,7 +171,7 @@
         left: -180px;
     }
     @media screen and(min-width:1500px) {
-        leftt: -100px;
+        left: -100px;
     }
 }
 .container_keyboard {
@@ -285,7 +285,7 @@
         column-gap: 30px;
         row-gap: 0;
     }
-    h4 {
+    h3 {
         width: 65%;
         @media screen and(min-width:$desktop) {
             width: 70%;
